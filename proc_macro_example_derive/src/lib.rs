@@ -20,8 +20,8 @@ pub fn derive_reflective(input: TokenStream) -> TokenStream {
     use ReflectiveInputType as RIT;
 
     let data = parse_macro_input!(input as ReflectiveInput);
-    //         ^----------------- This concise is why we implemented `syn::parse::Parse` for
-    //                            `ReflectiveInput`.
+    //         ^----------------- This concise syntax is why we implemented `syn::parse::Parse`
+    //                            for `ReflectiveInput`.
     let item_name = &data.0.ident;
 
     let get_item = |fn_name: TokenStream2, iter_fields: Box<dyn Iterator<Item = String>>| {
