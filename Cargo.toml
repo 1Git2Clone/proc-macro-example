@@ -3,6 +3,11 @@ name = "proc_macro_example"
 version = "0.1.0"
 edition = "2021"
 
+# This workspace part isn't required but I strongly recommend it since this is
+# how a project containing separate proc macros and test crates should be
+# managed.
+#
+# https://doc.rust-lang.org/book/ch14-03-cargo-workspaces.html
 [workspace]
 members = ["proc_macro_example_derive", "tests"]
 
