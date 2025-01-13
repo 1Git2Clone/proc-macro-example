@@ -30,7 +30,7 @@ pub fn derive_reflective(input: TokenStream) -> TokenStream {
         //          |                      writing.
         //          |
         //          |> This could be any token stream. It's unhygenic so we should be careful what
-        //          we call it with as it's supposed to be an indentifier. Fortunately due to
+        //          we call it with as it's supposed to be an indentifier. Fortunately, due to
         //          everything working in the rust compiler, we'd get Rust compiler errors in case
         //          we call it with something wrong. That's why it's important to have integration
         //          tests with proc macros since they can quickly get complicated and mistakes like
