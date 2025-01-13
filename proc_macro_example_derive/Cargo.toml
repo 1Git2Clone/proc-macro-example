@@ -4,9 +4,19 @@ version = "0.1.0"
 edition = "2021"
 
 [lib]
+# Required for all crates which export procedural macros.
 proc-macro = true
 
 [dependencies]
-proc-macro2 = "1.0.93"
-quote = "1.0.38"
+# Handles the parsing of the input `TokenStream`. It contains types that are
+# also seen in declarative macros such as: Ident, Expr, Lit as well as
+# additional types which save a lot of boilerplate such as: `syn::DeriveInput`.
 syn = "2.0.96"
+# Handles the tokenization of the newly generated output. Typing out a quote is
+# similar to typing out a declarative macro with the caveat that you can use
+# your syn-parsed data in it as well.
+quote = "1.0.38"
+# Contains procedural macro bindings which are usable even if you don't have a
+# proc macro crate. It's imported since it's what the `quote` crate uses for
+# its `TokenStream` output.
+proc-macro2 = "1.0.93"
