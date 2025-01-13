@@ -81,9 +81,12 @@ making a parser for the complex syntax of the language.
 
 ![Visual representation of syn being the front-end and quote as the back-end](./assets/front-end-ir-back-end.png "Visual representation of syn being the front-end and quote as the back-end")
 
-1. Syn handles the parsing (usually as `syn::DeriveInput`).
+1. Syn handles the parsing (usually as
+   [`syn::DeriveInput`](https://docs.rs/syn/latest/syn/struct.DeriveInput.html)).
 2. We work with the parsed data.
-3. Our work gets tokenized by the `quote::quote!` macro.
+3. Our work gets tokenized by the
+   [`quote::quote!`](https://docs.rs/quote/latest/quote/macro.quote.html)
+   macro.
 
 ## What will be done
 
