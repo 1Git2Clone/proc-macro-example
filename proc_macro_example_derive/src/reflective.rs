@@ -41,10 +41,10 @@ impl ReflectiveInput {
     /// Gets the item's fields/variants.
     pub fn get_input_items(&self) -> ReflectiveInputType {
         use ReflectiveInputType as RIT;
-        match self.0.data {
-            Data::Struct(ref v) => RIT::Fields(&v.fields),
-            Data::Enum(ref v) => RIT::Variants(&v.variants),
-            Data::Union(ref v) => RIT::Union(&v.fields),
+        match &self.0.data {
+            Data::Struct(v) => RIT::Fields(&v.fields),
+            Data::Enum(v) => RIT::Variants(&v.variants),
+            Data::Union(v) => RIT::Union(&v.fields),
         }
     }
 }
