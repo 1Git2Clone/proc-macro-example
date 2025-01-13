@@ -102,7 +102,7 @@ procedural macros.
 
 ### Source code sources
 
-Some other projects whose proc macros you can check out are:
+Some other projects whose procedural macros you can check out are:
 
 - [`synstructure`](https://github.com/mystor/synstructure "GitHub/mystor/synstructure")
 - [actix web](https://github.com/search?q=repo%3Aactix%2Factix-web+proc_macro&type=code "`proc_macro` source code search results")
