@@ -1,5 +1,12 @@
 # Derive macro example
 
+A short getting started on derive macros guide in Rust.
+
+> [!IMPORTANT]
+> This assumes you're familiar with Rust's declarative macros. Or at least
+> knowledgeable of programming language syntax and meaning of words like:
+> `identifier` and `expression`.
+
 ## Table of Contents
 
 ---
