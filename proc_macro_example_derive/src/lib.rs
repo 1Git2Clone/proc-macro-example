@@ -66,6 +66,9 @@ pub fn derive_reflective(input: TokenStream) -> TokenStream {
             //                     ^------- You can do it with `filter_map()` as well. `flat_map()`
             //                     is just more powerful though, since it combines: mapping,
             //                     filtering and flattening into one callback.
+            //
+            //                     Also, we flat_map it since the struct could also just be a tuple
+            //                     struct so `Field.ident` is `Option<Ident>` because of it.
         ),
         RIT::Variants(variants) => get_item(
             quote!(get_variants),
