@@ -35,7 +35,7 @@ A short getting started on derive macros guide in Rust.
 This assumes you're already familiar with declarative macros. Meaning you know
 what an Identifier and an Expression are and have written declarative macros.
 If you aren't familiarized with those things then you can read more about the
-core language syntax[^1] [^2] [^3] [^4] [^5].
+core language syntax.[^1] [^2] [^3] [^4] [^5]
 
 [^1]: <https://doc.rust-lang.org/reference/macros-by-example.html#metavariables>
 
@@ -121,10 +121,10 @@ procedural macros.
 
 Some other projects whose procedural macros you can check out are:
 
-- [`synstructure`](https://github.com/mystor/synstructure "GitHub/mystor/synstructure")
-- [actix web](https://github.com/search?q=repo%3Aactix%2Factix-web+proc_macro&type=code "`proc_macro` source code search results")
-- [the `poise` crate](https://github.com/serenity-rs/poise/blob/current/macros/src/lib.rs "GitHub/serenity-rs/poise/macros/lib.rs")
-- [the `darling` and `darling_core` crates](https://github.com/search?q=repo%3ATedDriggs%2Fdarling%20proc_macro&type=code "`proc_macro` source code search results")
+- [`synstructure`](https://github.com/mystor/synstructure "GitHub/mystor/synstructure").
+- [actix web](https://github.com/search?q=repo%3Aactix%2Factix-web+proc_macro&type=code "`proc_macro` source code search results").
+- [the `poise` crate](https://github.com/serenity-rs/poise/blob/current/macros/src/lib.rs "GitHub/serenity-rs/poise/macros/lib.rs").
+- [the `darling` and `darling_core` crates](https://github.com/search?q=repo%3ATedDriggs%2Fdarling%20proc_macro&type=code "`proc_macro` source code search results").
 
 ### Video sources
 
