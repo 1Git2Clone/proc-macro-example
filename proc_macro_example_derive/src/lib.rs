@@ -38,7 +38,7 @@ pub fn derive_reflective(input: TokenStream) -> TokenStream {
         //
         //          NOTE: Notice how it's `TokenStream2` instead of `TokenStream`. This is because
         //          the `quote` crate works with `TokenStream2` and the reason is that the
-        //          proc_macro2 crate doesn't require the user to have a proc macro crate. This is
+        //          `proc_macro2` crate doesn't require the user to have a proc macro crate. This is
         //          useful for making libraries that work with proc macro code without being proc
         //          macros themselves (since you can only export proc macros in proc macro crates).
 
