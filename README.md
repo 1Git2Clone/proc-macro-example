@@ -90,8 +90,8 @@ making a parser for the complex syntax of the language.
 
 ## What will be done
 
-An example project using a common pattern called: [Reflective
-programming](https://en.wikipedia.org/wiki/Reflective_programming). The derive
+An example project using a common pattern called: [`Reflective
+programming`](https://en.wikipedia.org/wiki/Reflective_programming). The derive
 macro will work on structs and enums and add a method to them called:
 `get_fields()` for structs and `get_variants()` for enums.
 
