@@ -56,6 +56,15 @@ core language syntax[^1] [^2] [^3] [^4] [^5].
 
 ### Front-end, back-end and intermediate representation
 
+Similarly to how compilers work, procedural macros work by taking some input,
+doing something with it, then generating new input for our main program. This
+is also the reason procedural macros need a separate crate in order to work.
+
+Fortunately, most of the heavy lifting (parsing and generating Rust code) is
+already done with the help of `syn` and `quote`. This means that for rust code
+generation, we can focus on the logic behind what we want to achieve more than
+making a parser for the complex syntax of the language.
+
 ![Visual representation of syn being the front-end and quote as the back-end](./assets/front-end-ir-back-end.png "Visual representation of syn being the front-end and quote as the back-end")
 
 1. Syn handles the parsing (usually as `syn::DeriveInput`).
