@@ -3,4 +3,8 @@ name = "proc_macro_example"
 version = "0.1.0"
 edition = "2021"
 
+[workspace]
+members = ["proc_macro_example_derive", "tests"]
+
 [dependencies]
+proc_macro_example_derive = { path = "proc_macro_example_derive" }
