@@ -1,0 +1,2 @@
+[alias]
+run-tests = "test --manifest-path tests/Cargo.toml"
