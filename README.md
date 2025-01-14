@@ -47,12 +47,10 @@ A short getting started on derive macros guide in Rust.
 
 1. A quick introduction to the three main types of declarative macros[^6]:
 
-   1.1. Function-like - `my_function_like_macro!(...)` **(Not to be confused with
-   declarative macros)**.
-
-   1.2. Derive - `#[derive(MyDeriveMacro)]` _(We'll focus on this one)_.
-
-   1.3. Attribute - `#[my_attribute_macro]`.
+   - Function-like - `my_function_like_macro!(...)` **(Not to be confused with
+     declarative macros)**.
+   - Derive - `#[derive(MyDeriveMacro)]` _(We'll focus on this one)_.
+   - Attribute - `#[my_attribute_macro]`.
 
 2. How to manage your thought process about the structuring of your crates and
    the structure of the macro.
