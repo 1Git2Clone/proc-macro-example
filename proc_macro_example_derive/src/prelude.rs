@@ -9,7 +9,7 @@ pub use proc_macro::TokenStream;
 pub use proc_macro2::TokenStream as TokenStream2;
 //                                  ^----------- Personal preference
 
-pub use quote::quote;
+pub use quote::{quote, ToTokens};
 pub use syn::{
     parse::{Parse, ParseStream},
     parse_macro_input,
