@@ -29,6 +29,7 @@ A short getting started on derive macros guide in Rust.
   - [Insight and resources](#insight-and-resources)
     - [Source code sources](#source-code-sources)
     - [Video sources](#video-sources)
+  - [License](#license)
 
 ---
 
@@ -136,3 +137,9 @@ Some other projects whose procedural macros you can check out are:
 
 - [Rust's Witchcraft](https://www.youtube.com/watch?v=MWRPYBoCEaY)
   by [No Boilerplate](https://www.youtube.com/@NoBoilerplate).
+
+## License
+
+This code is public domain and dual licensed with the [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode.en) license or [The Unlicense](https://opensource.org/license/unlicense) lisence.
+
+You're free to choose which one to use.
