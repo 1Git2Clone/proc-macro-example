@@ -35,6 +35,7 @@ A short getting started on derive macros guide in Rust.
   - [What will be discussed](#what-will-be-discussed)
     - [Front-end, back-end and intermediate representation](#front-end-back-end-and-intermediate-representation)
   - [What will be done](#what-will-be-done)
+    - [Usage example](#usage-example)
   - [Insight and resources](#insight-and-resources)
     - [Source code sources](#source-code-sources)
     - [Video sources](#video-sources)
@@ -98,6 +99,45 @@ Rust structure in a different format. This is the default way of
 ([serde_derive/src/pretend.rs#64-76](https://docs.rs/serde_derive/1.0.217/src/serde_derive/pretend.rs.html#64-76))
 to serialize your struct fields and enum variants.
 
+### Usage example
+
+Here's an example of how `serde` would serialize a `User` object defined like so:
+
+![Code Example of a serde Serialze struct into JSON](./assets/serde-example.png "Code Example of a serde Serialze struct into JSON")
+
+<!-- markdownlint-disable MD013 -->
+<!-- Reason: Rust's format standard is 100 column lines. -->
+
+```rust
+extern crate serde;
+extern crate serde_json;
+
+use proc_macro_example_derive::Reflective;
+
+#[derive(serde::Serialize, Reflective)]
+struct User {
+    pub user_id: u64,
+    pub username: String,
+    pub age: u32,
+}
+
+let some_user = User {
+    user_id: 1234,
+    username: String::from("Harry"),
+    age: 41,
+};
+let fields = User::get_fields();
+//           ^--------------- How convenient. This is a good example of how this macro can be used
+//           to streamline the testing process.
+let expected = format!(
+    r#"{{"{}":{},"{}":"{}","{}":{}}}"#,
+    fields[0], some_user.user_id, fields[1], &some_user.username, fields[2], some_user.age
+);
+assert_eq!(serde_json::to_string(&some_user).unwrap(), expected);
+```
+
+<!-- markdownlint-enable MD013 -->
+
 ## Insight and resources
 
 If you've used [`yew`](https://docs.rs/yew/ "docs.rs/yew"),
@@ -119,7 +159,8 @@ Some other projects whose procedural macros you can check out are:
 - [the `synstructure` crate](https://github.com/mystor/synstructure "GitHub/mystor/synstructure").
 - [actix web](https://github.com/search?q=repo%3Aactix%2Factix-web+proc_macro&type=code "`proc_macro` source code search results").
 - [the `poise` crate](https://github.com/serenity-rs/poise/blob/current/macros/src/lib.rs "GitHub/serenity-rs/poise/macros/lib.rs").
-- [the `darling` and `darling_core` crates](https://github.com/search?q=repo%3ATedDriggs%2Fdarling%20proc_macro&type=code "`proc_macro` source code search results").
+- [the `darling` and `darling_core`
+  crates](https://github.com/search?q=repo%3ATedDriggs%2Fdarling%20proc_macro&type=code "`proc_macro` source code search results").
 
 ### Video sources
 

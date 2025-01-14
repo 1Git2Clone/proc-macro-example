@@ -13,3 +13,5 @@ members = ["proc_macro_example_derive", "tests"]
 
 [dependencies]
 proc_macro_example_derive = { path = "proc_macro_example_derive" }
+serde = { version = "1.0.217", features = ["derive"] }
+serde_json = "1.0.135"
