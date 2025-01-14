@@ -52,7 +52,7 @@ A short getting started on derive macros guide in Rust.
 
    1.2. Derive - `#[derive(MyDeriveMacro)]` _(We'll focus on this one)_.
 
-   1.3 Attribute - `#[my_attribute_macro]`.
+   1.3. Attribute - `#[my_attribute_macro]`.
 
 2. How to manage your thought process about the structuring of your crates and
    the structure of the macro.
