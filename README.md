@@ -71,7 +71,7 @@ doing something with it, then generating new input for our main program. This
 is also the reason procedural macros need a separate crate in order to work.
 
 Fortunately, most of the heavy lifting (parsing and generating Rust code) is
-already done with the help of `syn` and `quote`. This means that for rust code
+already done with the help of `syn` and `quote`. This means that for Rust code
 generation, we can focus on the logic behind what we want to achieve more than
 making a parser for the complex syntax of the language.
 
@@ -142,7 +142,7 @@ If you've used [`yew`](https://docs.rs/yew/ "docs.rs/yew"),
 [`leptos`](https://docs.rs/leptos/ "docs.rs/leptos") or any other web
 development library, then you'd know you can parse any `TokenStream` into a
 Rust `TokenStream`. This example doesn't go that in-depth with what you can do
-since in practice it's possible to make a programming language with rust's proc
+since in practice it's possible to make a programming language with Rust's proc
 macros. In fact, people have also done that with a
 [Python interpreter written in Rust](https://github.com/RustPython/RustPython "GitHub/RustPython/RustPython")
 or [Python bindings in Rust](https://github.com/PyO3/pyo3 "GitHub/PyO3/pyo3").
