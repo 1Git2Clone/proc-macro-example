@@ -14,31 +14,7 @@ A short getting started on derive macros guide in Rust.
 > [!IMPORTANT]
 > This assumes you're familiar with Rust's declarative macros. Or at least
 > knowledgeable of programming language syntax and meaning of words like:
-> `identifier` and `expression`.
-
-## Table of Contents
-
----
-
-- [Derive macro example](#derive-macro-example)
-  - [Table of Contents](#table-of-contents)
-  - [Preface](#preface)
-  - [What will be discussed](#what-will-be-discussed)
-    - [Front-end, back-end and intermediate representation](#front-end-back-end-and-intermediate-representation)
-  - [What will be done](#what-will-be-done)
-  - [Insight and resources](#insight-and-resources)
-    - [Source code sources](#source-code-sources)
-    - [Video sources](#video-sources)
-  - [License](#license)
-
----
-
-## Preface
-
-This assumes you're already familiar with declarative macros. Meaning you know
-what an Identifier and an Expression are and have written declarative macros.
-If you aren't familiarized with those things then you can read more about the
-core language syntax.[^1] [^2] [^3] [^4] [^5]
+> `identifier` and `expression`.[^1] [^2] [^3] [^4] [^5]
 
 [^1]: <https://doc.rust-lang.org/reference/macros-by-example.html#metavariables>
 
@@ -49,6 +25,22 @@ core language syntax.[^1] [^2] [^3] [^4] [^5]
 [^4]: <https://doc.rust-lang.org/reference/statements-and-expressions.html>
 
 [^5]: <https://doc.rust-lang.org/reference/names.html>
+
+## Table of Contents
+
+---
+
+- [Derive macro example](#derive-macro-example)
+  - [Table of Contents](#table-of-contents)
+  - [What will be discussed](#what-will-be-discussed)
+    - [Front-end, back-end and intermediate representation](#front-end-back-end-and-intermediate-representation)
+  - [What will be done](#what-will-be-done)
+  - [Insight and resources](#insight-and-resources)
+    - [Source code sources](#source-code-sources)
+    - [Video sources](#video-sources)
+  - [License](#license)
+
+---
 
 ## What will be discussed
 
