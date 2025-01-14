@@ -1,11 +1,13 @@
 # Derive macro example
 
-[![Build Icon]][Build Status]&emsp;[![License Icon]][LICENSE]
+[![Build Icon]][Build Status]&emsp;[![License CC0 Icon]][LICENSE CC0]&emsp;[![License Unlicense Icon]][License Unlicense]
 
 [Build Icon]: https://img.shields.io/github/actions/workflow/status/1git2clone/proc-macro-example/ci.yml?branch=main
 [Build Status]: https://github.com/1git2clone/proc-macro-example/actions?query=branch%3Amain
-[License Icon]: https://img.shields.io/badge/license-CC0_1.0_Universal-blue.svg
-[License]: LICENSE
+[License CC0 Icon]: https://img.shields.io/badge/license-CC0_1.0_Universal-blue.svg
+[License CC0]: LICENSE-CC0
+[License Unlicense Icon]: https://img.shields.io/badge/license-Unlicense-blue.svg
+[License Unlicense]: LICENSE-UNLICENSE
 
 A short getting started on derive macros guide in Rust.
 
