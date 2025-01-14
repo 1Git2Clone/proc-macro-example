@@ -21,4 +21,4 @@ jobs:
       - name: Run clippy in `proc_macro_example_derive/`
         run: cargo clippy --verbose --all-features --manifest-path proc_macro_example_derive/Cargo.toml
       - name: Run clippy in `tests/`
-        run: cargo clippy --verbose --all-features --manifest-path tests/cargo.toml
+        run: cargo clippy --verbose --all-features --manifest-path tests/Cargo.toml
