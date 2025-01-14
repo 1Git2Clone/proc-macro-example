@@ -140,6 +140,6 @@ Some other projects whose procedural macros you can check out are:
 
 ## License
 
-This code is public domain and dual licensed with the [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode.en) license or [The Unlicense](https://opensource.org/license/unlicense) lisence.
+This repository is public domain and dual licensed with the [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode.en) license or [The Unlicense](https://opensource.org/license/unlicense) lisence.
 
 You're free to choose which one to use.
