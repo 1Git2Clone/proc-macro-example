@@ -110,9 +110,6 @@ Here's an example of how `serde` would serialize a `User` object defined like so
 <!-- Reason: Rust's format standard is 100 column lines. -->
 
 ```rust
-extern crate serde;
-extern crate serde_json;
-
 use proc_macro_example_derive::Reflective;
 
 #[derive(serde::Serialize, Reflective)]
