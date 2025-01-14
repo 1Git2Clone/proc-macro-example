@@ -36,7 +36,7 @@ pub enum ReflectiveInputType<'a> {
     // be one more type after the last comma token parsed. We take these things for granted as
     // users but this has to be addressed while we're parsing Rust code.
     Variants(&'a Punctuated<Variant, Token![,]>),
-    Union(&'a FieldsNamed),
+    UnionFields(&'a FieldsNamed),
 }
 
 /// Wrapper around `syn::DeriveInput` with extra reflection functionality.
@@ -49,7 +49,7 @@ impl ReflectiveInput {
         match &self.0.data {
             Data::Struct(v) => RIT::Fields(&v.fields),
             Data::Enum(v) => RIT::Variants(&v.variants),
-            Data::Union(v) => RIT::Union(&v.fields),
+            Data::Union(v) => RIT::UnionFields(&v.fields),
         }
     }
 }

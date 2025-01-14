@@ -74,7 +74,7 @@ pub fn derive_reflective(input: TokenStream) -> TokenStream {
             quote!(get_variants),
             Box::new(variants.iter().map(|v| v.ident.to_string())),
         ),
-        RIT::Union(union) => get_item(
+        RIT::UnionFields(union) => get_item(
             quote!(get_fields),
             Box::new(
                 union
