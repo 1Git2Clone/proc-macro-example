@@ -157,10 +157,9 @@ Some other projects whose procedural macros you can check out are:
 <!-- markdownlint-disable MD013 -->
 
 - [the `synstructure` crate](https://github.com/mystor/synstructure "GitHub/mystor/synstructure").
-- [actix web](https://github.com/search?q=repo%3Aactix%2Factix-web+proc_macro&type=code "`proc_macro` source code search results").
+- [the `actix_web` crate](https://github.com/search?q=repo%3Aactix%2Factix-web+proc_macro&type=code "`proc_macro` source code search results").
 - [the `poise` crate](https://github.com/serenity-rs/poise/blob/current/macros/src/lib.rs "GitHub/serenity-rs/poise/macros/lib.rs").
-- [the `darling` and `darling_core`
-  crates](https://github.com/search?q=repo%3ATedDriggs%2Fdarling%20proc_macro&type=code "`proc_macro` source code search results").
+- [the `darling` and `darling_core` crates](https://github.com/search?q=repo%3ATedDriggs%2Fdarling%20proc_macro&type=code "`proc_macro` source code search results").
 
 <!-- markdownlint-enable MD013 -->
 
