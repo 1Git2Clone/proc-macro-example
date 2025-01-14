@@ -1,0 +1,24 @@
+name: Clippy
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+env:
+  CARGO_TERM_COLOR: always
+  RUST_BACKTRACE: full
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run clippy
+        run: cargo clippy --verbose --all-features
+      - name: Run clippy in `proc_macro_example_derive/`
+        run: cargo clippy --verbose --all-features --manifest-path proc_macro_example_derive/Cargo.toml
+      - name: Run clippy in `tests/`
+        run: cargo clippy --verbose --all-features --manifest-path tests/cargo.toml
