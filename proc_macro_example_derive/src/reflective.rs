@@ -58,7 +58,7 @@ impl ReflectiveInput {
     }
 }
 
-// The implementation is done in order to use syn's `parse_macro_input!` macro in the derive macro.
+/// The implementation is done in order to use syn's [`parse_macro_input`] macro in the derive macro.
 impl Parse for ReflectiveInput {
     fn parse(input: ParseStream) -> syn::Result<Self> {
         Ok(Self(input.parse()?))
@@ -91,7 +91,7 @@ impl ToTokens for ReflectiveInput {
 
             // This syntax is very similar to the traditional declarative macro syntax. The main
             // difference is instead of `$` we use `#`. Additionally we can use variables from our
-            // #[proc_macro] function like so: `#variable`.
+            // `#[proc_macro]` function like so: `#variable`.
             quote! {
                 impl #item_name {
                     pub const fn #fn_name() -> &'static [&'static str] {
@@ -99,7 +99,7 @@ impl ToTokens for ReflectiveInput {
 
                         &[ #(#iter_fields),* ]
                         // ^- ********** --- `#(),*` expands similarly to how a declarative macro would
-                        //                           be expanded.
+                        //                           be expanded with `$(),*`.
                     }
                 }
             }
