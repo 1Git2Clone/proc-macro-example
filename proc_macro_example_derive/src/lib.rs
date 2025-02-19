@@ -21,8 +21,8 @@ pub fn derive_reflective(input: TokenStream) -> TokenStream {
     let data = parse_macro_input!(input as ReflectiveInput);
     //         ^----------------- This concise syntax is why we implemented `syn::parse::Parse`
     //                            for `ReflectiveInput`.
-    //^-- Notice how we convert the `proc_macro2::TokenStream` output of `quote!` to
-    // `proc_macro::TokenStream`.
 
     data.into_token_stream().into()
+    //                       ^--- Notice how we convert the `proc_macro2::TokenStream` output of
+    //                       `quote!` to `proc_macro::TokenStream`.
 }
