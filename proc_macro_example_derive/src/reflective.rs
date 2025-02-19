@@ -31,13 +31,15 @@ use crate::prelude::*;
 /// }// ^------ This enum will capture the `Union` variant since it's a `union`.
 /// ```
 pub enum ReflectiveInputType<'a> {
+    /// Captures a `struct`'s fields. This isn't [`FieldsNamed`] due to the existence tuple structs.
     Fields(&'a Fields),
-    // `syn::punctuated::Punctuated` is also a type that saves boilerplate. For a declarative macro
-    // equivalent it'd be parsing: `$($x:Variant),+ $(,)?` (if declarative macros had `Variant` as
-    // a fragment specifier that is). This extra comma token makes it so there could or could not
-    // be one more type after the last comma token parsed. We take these things for granted as
-    // users but this has to be addressed while we're parsing Rust code.
+    /// [`syn::punctuated::Punctuated`] is also a type that saves boilerplate. For a declarative macro
+    /// equivalent it'd be parsing: `$($x:Variant),+ $(,)?` (if declarative macros had `Variant` as
+    /// a fragment specifier that is). This extra comma token makes it so there could or could not
+    /// be one more type after the last comma token parsed. We take these things for granted as
+    /// users but this has to be addressed while we're parsing Rust code.
     Variants(&'a Punctuated<Variant, Token![,]>),
+    /// Unlike `struct`'s, unions are forced to have named fields, thus using [`FieldsNamed`].
     UnionFields(&'a FieldsNamed),
 }
 
